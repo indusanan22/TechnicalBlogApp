@@ -1,0 +1,18 @@
+<!Doctype html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <title>Technical Blog Application</title>
+</head>
+
+<body>
+
+<posts th:each="p: ${posts}">
+    <h2 th:text="${p.title}"></h2>
+    <i>Posts On:</i><span th:text="${p.date}"></span>
+    <h2 th:text="${p.body}"></h2>
+</posts>
+
+</body>
+
+
+</html>
