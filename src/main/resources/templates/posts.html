@@ -1,13 +1,11 @@
 <!Doctype html>
 <html xmlns:th="http://thymeleaf.org">
-<head th:replace="layout::site-head">
-    <title>Spring MVC Application</title>
+
+<head th:replace="layout :: site-head">
+    <title>Spring MVC Application-User Posts</title>
 </head>
-
-<header th:replace="layout::logged-out"></header>
-
+<header th:replace="layout :: logged-in"></header>
 <body>
-
 <posts th:each="p: ${posts}">
     <h2 th:text="${p.title}"></h2>
     <i>Posts On:</i><span th:text="${p.date}"></span>
@@ -15,6 +13,4 @@
 </posts>
 
 </body>
-
-
 </html>

@@ -10,10 +10,8 @@ import java.util.List;
 @Service
 public class PostService {
 
-    List<Post> posts = new ArrayList<>();
-
     public List<Post> getAllPosts() {
-
+        List<Post> posts = new ArrayList<>();
         Post post1 = new Post();
         post1.setTitle("Post 1");
         post1.setBody("post 1 body");
@@ -32,6 +30,19 @@ public class PostService {
         posts.add(post1);
         posts.add(post2);
         posts.add(post3);
+
+        return posts;
+    }
+
+    public List<Post> getOnePost() {
+        List<Post> posts = new ArrayList<>();
+
+        Post postFirst = new Post();
+        postFirst.setTitle("First User Post");
+        postFirst.setBody("First User Post body");
+        postFirst.setDate(new Date());
+
+        posts.add(postFirst);
 
         return posts;
     }
